@@ -1,6 +1,12 @@
-.search-box {
+.input-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 25%;
   margin: auto;
-  height :50px;
-  font-size: 24px;
+  height: 32px;
+}
+
+.search-box {
+  font-size: 20px;
 }

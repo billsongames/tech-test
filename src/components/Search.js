@@ -1,13 +1,22 @@
 import React, { useState } from "react";
-import "../styles/search.css"
+import getImages from "../requests/getImages";
+import "../styles/search.css";
 
 const Search = () => {
   const [searchText, setSearchText] = useState("")
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    getImages(searchText)
+  }
+
   return(
-    <>
-      <input className="search-box" type="text" onChange={(e) => setValue(e.target.value)}></input>
-    </>
+    <div>
+      <form className="input-search" onSubmit={handleSubmit}>
+        <input className="search-box" type="text" onChange={(e) => setSearchText(e.target.value)}></input>
+        <button className="search-button" type="submit">Search...</button>
+      </form>
+    </div>
   )
 }
 
