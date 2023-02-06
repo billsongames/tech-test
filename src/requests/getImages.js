@@ -8,20 +8,16 @@ const getImages = (query) => {
       .get(`https://images-api.nasa.gov/search?q=${query}`)
       .then((response) => {
         const imageResults = (response.data.collection.items)
-        let images=[]
-        
-        for (let i=0; i<imageResults.length; i++) {
-          if (imageResults[i].data[0].media_type === "image") {
-//            parsedImages.push(imageResults[i].data[0])
-            images.push(imageResults[i].links[0])
-          } 
-        }
-        console.log(images)
+        const filteredResults = imageResults.filter(result => result.data[0].media_type === "image")
+        const images = filteredResults.map(result => result.links[0].href)
+        return images
       })
+
       .catch((err) => {
         console.log(err)
       })
-    }  
   }
+}  
 
-  export default getImages;
+
+export default getImages;
