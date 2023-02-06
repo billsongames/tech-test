@@ -10,11 +10,11 @@ function SearchResults({ results }) {
   
   return(
       <div className="search-results__container">
-        <h2>{results.length} results</h2>
+        <h2 id="results-heading">{results.length} results</h2>
         <div className="image-results">
         {results.map(image =>
-          <div className="image-container">
-            <img src={image} className="image-results__image" />
+          <div className="image-container" loading="lazy">
+            <ModalImage small={image} large={image} hideDownload={true} hideZoom={true} className="image-results__image" />
           </div>)}
         </div>
       </div>

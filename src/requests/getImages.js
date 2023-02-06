@@ -9,6 +9,7 @@ const getImages = (query) => {
       .then((response) => {
         const imageResults = (response.data.collection.items)
         const filteredResults = imageResults.filter(result => result.data[0].media_type === "image")
+        console.log(filteredResults)
         const images = filteredResults.map(result => result.links[0].href)
         return images
       })

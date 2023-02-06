@@ -1,3 +1,7 @@
+#results-heading {
+  text-align: center;
+}
+
 .image-results {
   display: flex;
   flex-wrap: wrap;
@@ -6,17 +10,21 @@
 
 .image-container {
   margin: 6px;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   align-items: center;
   justify-items: center;
   border-style: solid;
   border-width: 4px;
-
 }
 
 .image-results__image {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
+}
+
+.image_show {
+  height: 400px;
+  width: auto;
 }

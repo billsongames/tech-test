@@ -1,8 +1,3 @@
-.app {
-  display: flex;
-  flex-direction: column;
-}
-
 .nasa-logo {
   display: block;
   width: 300px;
