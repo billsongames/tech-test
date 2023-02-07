@@ -32,7 +32,7 @@ const getImages = (query) => {
               thumbnail: thumbnailUrl,
               original: thumbnailUrl,
               originalTitle: title,
-              originalHeight: 800,
+              originalHeight: 600,
               description: description,
             }
 
