@@ -5,16 +5,23 @@ import "../styles/searchResults.css";
 
 function SearchResults({ results }) {
   if (!results.length) {
-    return <p>No results</p>
+    return (
+      <div id="results-heading">
+        No results
+      </div>
+    )
   }  
+
   
   return(
       <div className="search-results__container">
-        <h2 id="results-heading">{results.length} results</h2>
+        <div id="results-heading">{results.length} results</div>
         <div className="image-results">
         {results.map(image =>
-          <div className="image-container" loading="lazy">
-            <ModalImage small={image} large={image} hideDownload={true} hideZoom={true} className="image-results__image" />
+          <div className="image-container">
+            <a href={image} target="_blank"><img src={image} className="image-results__image" /></a>
+
+          {/* <ModalImage small={image} large={image} hideDownload={true} hideZoom={true} className="image-results__image" /> */}
           </div>)}
         </div>
       </div>
