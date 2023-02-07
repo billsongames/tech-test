@@ -16,7 +16,7 @@ function Search({ setSearchResults, setInitialise }) {
   }
 
   return(
-    <div className="top-container">
+    <div>
       <Header />
       <div>
         <form className="input-search" onSubmit={handleSubmit}>

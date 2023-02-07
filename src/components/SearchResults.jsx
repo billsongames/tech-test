@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import PropTypes from "prop-types";
-import ModalImage from "react-modal-image";
+import ImageGallery from 'react-image-gallery';
 import "../styles/searchResults.css";
 
 function SearchResults({ results }) {
@@ -11,18 +11,12 @@ function SearchResults({ results }) {
       </div>
     )
   }  
-
   
   return(
-      <div className="search-results__container">
+      <div>
         <div id="results-heading">{results.length} results</div>
         <div className="image-results">
-        {results.map(image =>
-          <div className="image-container">
-            <a href={image} target="_blank"><img src={image} className="image-results__image" /></a>
-
-          {/* <ModalImage small={image} large={image} hideDownload={true} hideZoom={true} className="image-results__image" /> */}
-          </div>)}
+          <ImageGallery items={results} thumbnailPosition="left" showIndex={true} showFullscreenButton={false} lazyLoad={true} />
         </div>
       </div>
     )
@@ -35,7 +29,7 @@ SearchResults.defaultProps = {
 
 SearchResults.propTypes = {
   results: PropTypes.arrayOf (
-    PropTypes.string.isRequired,
+    PropTypes.object.isRequired,
   ),
   length: PropTypes.number.isRequired,
 }
