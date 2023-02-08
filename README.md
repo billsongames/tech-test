@@ -1,7 +1,7 @@
 NASA Image Search
 =================
 
-This is my second project produced with React. It is an image search application and uses a NASA image API to display images after a successful search. The images are displayed using  https://github.com/xiaolin/react-image-gallery, a React carousel image gallery component with thumbnail support. Documentation for further experimentation can be found at https://github.com/xiaolin/react-image-gallery/blob/master/README.md
+This is my second project produced with React. It is an image search application and uses a NASA image API to display images after a successful search. The images are displayed using [https://github.com/xiaolin/react-image-gallery](https://github.com/xiaolin/react-image-gallery), a React carousel image gallery component with thumbnail support. Documentation for further experimentation can be found at [https://github.com/xiaolin/react-image-gallery/blob/master/README.md](https://github.com/xiaolin/react-image-gallery/blob/master/README.md)
 
 ![screenshot](https://user-images.githubusercontent.com/78327580/217286960-1dc552a2-5490-47a2-9814-406649df6e2a.png)
 
