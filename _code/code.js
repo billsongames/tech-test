@@ -1,5 +1,7 @@
-          <div className="image-container">
-            <a href={image} target="_blank"><img src={image} className="image-results__image" /></a>
+// ORIGINAL PARSE RESULTS METHOD         
+//
+//        const filteredResults = imageResults.filter(result => result.data[0].media_type === "image")
+//        console.log(imageResults)
+//        const images = filteredResults.map(result => result.links[0].href)
 
-          
-          </div>)}
+//        return images

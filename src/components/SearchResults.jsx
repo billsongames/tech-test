@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import PropTypes from "prop-types";
 import ImageGallery from 'react-image-gallery';
 import "../styles/searchResults.css";
@@ -6,7 +6,7 @@ import "../styles/searchResults.css";
 function SearchResults({ results }) {
   if (!results.length) {
     return (
-      <div id="results-heading">
+      <div class="results-heading">
         No results
       </div>
     )
@@ -14,7 +14,7 @@ function SearchResults({ results }) {
   
   return(
       <div>
-        <div id="results-heading">{results.length} results</div>
+        <div className="results-heading">{results.length} results</div>
         <div className="image-results">
           <ImageGallery items={results} thumbnailPosition="left" showIndex={true} showFullscreenButton={false} lazyLoad={true} />
         </div>
@@ -29,8 +29,14 @@ SearchResults.defaultProps = {
 
 SearchResults.propTypes = {
   results: PropTypes.arrayOf (
-    PropTypes.object.isRequired,
-  ),
+    PropTypes.shape({
+      thumbnail: PropTypes.string,
+      original: PropTypes.string,
+      originalTitle: PropTypes.string,
+      originalHeight: PropTypes.number,
+      description: PropTypes.string,
+    }.isRequired,
+  )),
   length: PropTypes.number.isRequired,
 }
 export default SearchResults;

@@ -9,15 +9,7 @@ const getImages = (query) => {
       .then((response) => {
         const imageResults = (response.data.collection.items)
 
-// ORIGINAL PARSE RESULTS METHOD         
-//
-//        const filteredResults = imageResults.filter(result => result.data[0].media_type === "image")
-//        console.log(imageResults)
-//        const images = filteredResults.map(result => result.links[0].href)
-
-//        return images
-
-        let results=[]
+        const results=[]
 
         for (let i=0; i<imageResults.length; i++) {
           if (imageResults[i].data[0].media_type === "image") {
